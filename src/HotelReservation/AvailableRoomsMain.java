@@ -1,5 +1,5 @@
 
-package availableroomsmain;
+package HotelReservation;
 
 public class AvailableRoomsMain {
 
