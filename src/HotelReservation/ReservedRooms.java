@@ -163,7 +163,6 @@ public class ReservedRooms extends JFrame {
         setLocation(20, 200);
     }
 
-        public static void main(String[] args) {
-        new ReservedRooms();
+     
     }
-    }
+
