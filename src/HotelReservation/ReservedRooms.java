@@ -7,11 +7,13 @@ import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
 import javax.swing.JComboBox;
+import java.awt.*;
+import javax.swing.ImageIcon;
 
 public class ReservedRooms extends JFrame {
-    JTextField T1, T2, T3, T4;
+
+    JTextField T1, T2, T3, T4, T6;
     JComboBox T5;
-  
 
     ReservedRooms() {
         JPanel layout = new JPanel();
@@ -75,7 +77,7 @@ public class ReservedRooms extends JFrame {
         checkOutLabel.setFont(new Font("Serif", Font.BOLD, 16));
         checkOutLabel.setForeground(Color.BLACK);
         layout.add(checkOutLabel);
-        
+
         T4 = new JTextField();
         T4.setBounds(200, 180, 156, 20);
         T4.setFont(new Font("Calibri", Font.PLAIN, 14));
@@ -88,21 +90,80 @@ public class ReservedRooms extends JFrame {
         confirmLabel.setFont(new Font("Serif", Font.BOLD, 16));
         confirmLabel.setForeground(Color.BLACK);
         layout.add(confirmLabel);
-       
-        T5 = new JComboBox(new String []{"REGION 1 - ILOCOS", "REGION 2 - CAR", "REGION 3 - CENTRAL LUZON", "REGION 4-A /CALABARZON","REGION 4-B / MIMIROPA", "REGION 5 - BICOL","REGION 6 - WESTERN VISAYAS ", "REGION 7 - CENTRAL VISAYAS", "REGION 8 - EASTERN VISAYAS", "REGION 9 - ZAMBOANGA PENINSULA", "REGION 10 - NORTHERN MINDANAO", "REGION 11 - DAVAO REGION", "REGION 12 - SOCCSKSARGEN", "REGION 13 - CARAGA", "REGION 14 - BARMM"});
+
+        T5 = new JComboBox(new String[]{"REGION 1 - ILOCOS", "REGION 2 - CAR", "REGION 3 - CENTRAL LUZON", "REGION 4-A /CALABARZON", "REGION 4-B / MIMIROPA", "REGION 5 - BICOL", "REGION 6 - WESTERN VISAYAS ", "REGION 7 - CENTRAL VISAYAS", "REGION 8 - EASTERN VISAYAS", "REGION 9 - ZAMBOANGA PENINSULA", "REGION 10 - NORTHERN MINDANAO", "REGION 11 - DAVAO REGION", "REGION 12 - SOCCSKSARGEN", "REGION 13 - CARAGA", "REGION 14 - BARMM"});
         T5.setBounds(460, 180, 200, 20);
         T5.setFont(new Font("Arial", Font.PLAIN, 12));
         T5.setForeground(Color.BLACK);
         T5.setBackground(new Color(255, 255, 255));
         layout.add(T5);
-      
+///Maria
+        JLabel welcomeLabel = new JLabel("Let us know what you need!");
+        welcomeLabel.setBounds(64, 220, 250, 22);
+        welcomeLabel.setFont(new Font("Serif", Font.BOLD, 20));
+        welcomeLabel.setForeground(Color.BLACK);
+        layout.add(welcomeLabel);
 
+        JLabel preferenceLabel = new JLabel("Do you have a smoking preference? ");
+        preferenceLabel.setBounds(64, 270, 300, 22);
+        preferenceLabel.setFont(new Font("Serif", Font.BOLD, 16));
+        preferenceLabel.setForeground(Color.BLACK);
+        layout.add(preferenceLabel);
+
+        Checkbox c1 = new Checkbox("Non-smoking");
+        c1.setBounds(64, 280, 100, 60);
+        c1.setFont(new Font("Arial", Font.PLAIN, 12));
+        layout.add(c1);
+
+        Checkbox c2 = new Checkbox("Smoking");
+        c2.setBounds(64, 330, 100, 30);
+        c2.setFont(new Font("Arial", Font.PLAIN, 12));
+        layout.add(c2);
+
+        JLabel bedprefLabel = new JLabel("What bed configuration do you prefer? ");
+        bedprefLabel.setBounds(64, 360, 300, 22);
+        bedprefLabel.setFont(new Font("Serif", Font.BOLD, 16));
+        bedprefLabel.setForeground(Color.BLACK);
+        layout.add(bedprefLabel);
+
+        Checkbox c3 = new Checkbox("I'd like a large bed");
+        c3.setBounds(64, 380, 100, 60);
+        c3.setFont(new Font("Arial", Font.PLAIN, 12));
+        layout.add(c3);
+
+        Checkbox c4 = new Checkbox("I'd like a twin beds");
+        c4.setBounds(64, 430, 100, 30);
+        c4.setFont(new Font("Arial", Font.PLAIN, 12));
+        layout.add(c4);
+
+        JLabel AddReqLabel = new JLabel("Additional Request:");
+        AddReqLabel.setBounds(64, 470, 300, 22);
+        AddReqLabel.setFont(new Font("Serif", Font.BOLD, 16));
+        AddReqLabel.setForeground(Color.BLACK);
+        layout.add(AddReqLabel);
+
+        T6 = new JTextField();
+        T6.setBounds(64, 500, 800, 50);
+        T6.setFont(new Font("Arial", Font.PLAIN, 12));
+        T6.setForeground(Color.BLACK);
+        T6.setBackground(new Color(255, 255, 255));
+        layout.add(T6);
+        
+        ImageIcon imageIcon = new ImageIcon("V.png");
+        Image image = imageIcon.getImage().getScaledInstance(300, 300, Image.SCALE_DEFAULT);
+        ImageIcon imageIcon1 = new ImageIcon(image);
+        JLabel label = new JLabel(imageIcon1);
+        label.setBounds(670, 40, 200, 200);
+        layout.add(label);
+     
         setSize(900, 600);
         setLayout(null);
         setVisible(true);
         setResizable(false);
         setLocation(20, 200);
     }
-   
-    }
 
+        public static void main(String[] args) {
+        new ReservedRooms();
+    }
+    }
