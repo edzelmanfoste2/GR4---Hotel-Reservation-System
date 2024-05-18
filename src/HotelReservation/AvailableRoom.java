@@ -138,11 +138,11 @@ public class AvailableRoom extends JFrame{
       add(info);
       info.setBounds(30,120, 500, 90);
       
-      JLabel view = new JLabel();
-      view.setText("Shower");
-      view.setFont(new Font("Waverly", Font.PLAIN, 15));
-      add(view);
-      view.setBounds(30,180, 500, 90);
+      JLabel sh = new JLabel();
+      sh.setText("Shower");
+      sh.setFont(new Font("Waverly", Font.PLAIN, 15));
+      add(sh);
+      sh.setBounds(30,180, 500, 90);
       
        JLabel bth = new JLabel();
       bth.setText("Kitchenette ");
