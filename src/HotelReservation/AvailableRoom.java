@@ -196,11 +196,11 @@ public class AvailableRoom extends JFrame{
       
       //FOR ROOM 104(FOR 1-2 PAX ONLY)
       
-       JLabel roomtype = new JLabel();
-      roomtype.setText("ROOM 104- STANDARD TRIPLE ROOM");
-      roomtype.setFont(new Font("Serif", Font.PLAIN, 30));
-      add(roomtype);
-      roomtype.setBounds(10, 320, 600, 50);
+       JLabel header2 = new JLabel();
+      header2.setText("ROOM 104- STANDARD TRIPLE ROOM");
+      header2.setFont(new Font("Serif", Font.PLAIN, 30));
+      add(header2);
+      header2.setBounds(10, 320, 600, 50);
       
         //FOR ROOM 104(FOR 1-2 PAX ONLY) INFO
         
