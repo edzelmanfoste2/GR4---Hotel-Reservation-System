@@ -266,11 +266,11 @@ public class AvailableRoom extends JFrame{
       add(options2);
       options2.setBounds(370,468, 500, 90);
       
-        JLabel bf2 = new JLabel();
-      bf2.setText(" ✔ Breakfast at ₱1,200");
-      bf2.setFont(new Font("Waverly", Font.PLAIN, 15));
-      add(bf2);
-      bf2.setBounds(370,498, 500, 90);
+        JLabel b2 = new JLabel();
+      b2.setText(" ✔ Breakfast at ₱1,200");
+      b2.setFont(new Font("Waverly", Font.PLAIN, 15));
+      add(b2);
+      b2.setBounds(370,498, 500, 90);
       
       //PRICE PER NIGHT
         JLabel prc4 = new JLabel();
