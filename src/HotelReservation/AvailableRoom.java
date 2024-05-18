@@ -222,11 +222,11 @@ public class AvailableRoom extends JFrame{
       add(city);
       city.setBounds(30,438, 500, 90);
       
-       JLabel smoke = new JLabel();
-      smoke.setText("Shower");
-      smoke.setFont(new Font("Waverly", Font.PLAIN, 15));
-      add(smoke);
-      smoke.setBounds(30,468, 500, 90);
+       JLabel s = new JLabel();
+      s.setText("Shower");
+      s.setFont(new Font("Waverly", Font.PLAIN, 15));
+      add(s);
+      s.setBounds(30,468, 500, 90);
       
        JLabel kitchen = new JLabel();
       kitchen.setText("Kitchenette");
