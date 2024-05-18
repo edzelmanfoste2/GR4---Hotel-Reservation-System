@@ -132,11 +132,11 @@ public class AvailableRoom extends JFrame{
       add(roomsize);
       roomsize.setBounds(30, 90, 500, 90);
       
-      JLabel info = new JLabel();
-      info.setText("City view");
-      info.setFont(new Font("Waverly", Font.PLAIN, 15));
-      add(info);
-      info.setBounds(30,120, 500, 90);
+      JLabel cv = new JLabel();
+      cv.setText("City view");
+      cv.setFont(new Font("Waverly", Font.PLAIN, 15));
+      add(cv);
+      cv.setBounds(30,120, 500, 90);
       
       JLabel sh = new JLabel();
       sh.setText("Shower");
@@ -144,11 +144,11 @@ public class AvailableRoom extends JFrame{
       add(sh);
       sh.setBounds(30,180, 500, 90);
       
-       JLabel bth = new JLabel();
-      bth.setText("Kitchenette ");
-      bth.setFont(new Font("Waverly", Font.PLAIN, 15));
-      add(bth);
-      bth.setBounds(30,150, 500, 90);
+       JLabel kc = new JLabel();
+      kc.setText("Kitchenette ");
+      kc.setFont(new Font("Waverly", Font.PLAIN, 15));
+      add(kc);
+      kc.setBounds(30,150, 500, 90);
       
       //BENEFITS PANEL
        JLabel price = new JLabel();
