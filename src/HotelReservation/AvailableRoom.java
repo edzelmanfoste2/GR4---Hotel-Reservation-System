@@ -279,12 +279,12 @@ public class AvailableRoom extends JFrame{
       add(prc4);
       prc4.setBounds(900,400, 400, 90);
       
-      JButton checkin = new JButton("Book Now!");
-      checkin.setFont(new Font("Serif", Font.PLAIN, 20));
-              add(checkin);
-              checkin.setBounds(1090, 120, 150, 50);     
-                checkin.setBackground(new Color(23, 33, 35));
-                checkin.setForeground(Color.WHITE);
+      JButton booknow = new JButton("Book Now!");
+      booknow.setFont(new Font("Serif", Font.PLAIN, 20));
+              add(booknow);
+              booknow.setBounds(1090, 120, 150, 50);     
+                booknow.setBackground(new Color(23, 33, 35));
+                booknow.setForeground(Color.WHITE);
               
               JButton viewroom = new JButton("View Room");
                   viewroom.setFont(new Font("Serif", Font.PLAIN, 20));
@@ -293,12 +293,12 @@ public class AvailableRoom extends JFrame{
               viewroom.setBackground(new Color(23, 33, 35));
               viewroom.setForeground(Color.WHITE);
               
-              JButton checkin2 = new JButton("Book Now!");
-      checkin2.setFont(new Font("Serif", Font.PLAIN, 20));
-              add(checkin2);
-              checkin2.setBounds(1090, 438, 150, 50);     
-                checkin2.setBackground(new Color(23, 33, 35));
-                checkin2.setForeground(Color.WHITE);
+              JButton booknow2 = new JButton("Book Now!");
+      booknow2.setFont(new Font("Serif", Font.PLAIN, 20));
+              add(booknow2);
+              booknow2.setBounds(1090, 438, 150, 50);     
+                booknow2.setBackground(new Color(23, 33, 35));
+                booknow2.setForeground(Color.WHITE);
               
                  JButton viewroom2 = new JButton("View Room");
                   viewroom2.setFont(new Font("Serif", Font.PLAIN, 20));
