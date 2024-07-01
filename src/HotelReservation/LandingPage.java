@@ -77,7 +77,7 @@ public class LandingPage implements ActionListener{
         cancelButton.setForeground(Color.WHITE);
         
         //Button for viewing the available rooms
-        viewButton.setText("View Rooms");
+        viewButton.setText("Available Rooms");
         viewButton.setBounds(255, 210, 190, 35);
         viewButton.setFocusable(false);
         viewButton.setFont(new Font("Tw Cen MT", Font.PLAIN, 15));
