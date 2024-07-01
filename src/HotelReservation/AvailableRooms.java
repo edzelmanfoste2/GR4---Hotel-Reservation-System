@@ -6,12 +6,19 @@ package HotelReservation;
 
 import java.awt.Color;
 import java.awt.Font;    
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import javax.swing.*;
 import static javax.swing.WindowConstants.EXIT_ON_CLOSE;
 
 
-public class AvailableRooms extends JFrame{
+public class AvailableRooms extends JFrame implements ActionListener{
 
+    JButton checkin = new JButton("Check-in");
+    JButton viewroom = new JButton("View Room");
+    JButton checkin2 = new JButton("Check-in");
+    JButton viewroom2 = new JButton("View Room");
+    
     public AvailableRooms() {   
       
       JLabel roomheader2 = new JLabel("ROOM 101 - DELUXE SUITE TWIN");
@@ -314,28 +321,28 @@ public class AvailableRooms extends JFrame{
       add(prc4);
       prc4.setBounds(690,438, 500, 90);
       
-      JButton checkin = new JButton("Check-in");
+      //JButton checkin = new JButton("Check-in");
       checkin.setFont(new Font("Serif", Font.PLAIN, 20));
               add(checkin);
               checkin.setBounds(1090, 120, 150, 50);     
                 checkin.setBackground(new Color(23, 33, 35));
                 checkin.setForeground(Color.WHITE);
               
-              JButton viewroom = new JButton("View Room");
+      //JButton viewroom = new JButton("View Room");
                   viewroom.setFont(new Font("Serif", Font.PLAIN, 20));
               add(viewroom);
               viewroom.setBounds(1090, 200, 150, 50);
               viewroom.setBackground(new Color(23, 33, 35));
               viewroom.setForeground(Color.WHITE);
-              
-              JButton checkin2 = new JButton("Check-in");
+                
+      //JButton checkin2 = new JButton("Check-in");
       checkin2.setFont(new Font("Serif", Font.PLAIN, 20));
               add(checkin2);
               checkin2.setBounds(1090, 438, 150, 50);     
                 checkin2.setBackground(new Color(23, 33, 35));
                 checkin2.setForeground(Color.WHITE);
               
-                 JButton viewroom2 = new JButton("View Room");
+      //JButton viewroom2 = new JButton("View Room");
                   viewroom2.setFont(new Font("Serif", Font.PLAIN, 20));
               add(viewroom2);
               viewroom2.setBounds(1090, 518, 150, 50);
@@ -366,6 +373,39 @@ public class AvailableRooms extends JFrame{
       red2.add(prices02);
       navyblue04.add(booking2);
 
-     
+     checkin.addActionListener(this);
+     viewroom.addActionListener(this);
+     checkin2.addActionListener(this);
+     viewroom2.addActionListener(this);
+      
+    }
+
+    @Override
+    public void actionPerformed(ActionEvent e) {
+        dispose();
+        if (e.getSource() == checkin) 
+        {
+         dispose();
+         ReservedRooms rs = new ReservedRooms();
+         rs.setVisible(true);   
+        } 
+        else if (e.getSource() == viewroom) 
+        {
+            dispose();
+            ViewRoomC vr = new ViewRoomC();
+            
+        } 
+        else if (e.getSource() == checkin2) 
+        {
+         dispose();
+         ReservedRooms rs = new ReservedRooms();
+         rs.setVisible(true);   
+        } 
+        else if (e.getSource() == viewroom2) 
+        {
+            dispose();
+            ViewRoomC vr = new ViewRoomC();
+            
+        }
     }
 }

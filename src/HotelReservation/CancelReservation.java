@@ -9,21 +9,39 @@ import java.awt.Color;
 import java.awt.Dimension;
 import java.awt.Font;
 import java.awt.Frame;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.DriverManager;
+import javax.swing.JOptionPane;
 
 /**
  *
  * @author CASTOR
  */
-public class CancelReservation extends JFrame {
+public class CancelReservation extends JFrame implements ActionListener{
+    
+    Connection connect = null;
+    PreparedStatement pst = null;
+    
+    private JFrame frame = new JFrame("Cancel Reservation");
+    
+       JButton submitButton = new JButton();
+       JButton btnReturn = new JButton();
+       private JTextField fnameText = new JTextField();
+       private JTextField lnameText = new JTextField();
+       private JTextField reservationText = new JTextField();
+       private JTextField reasonText = new JTextField();
     
     CancelReservation() {
-       JFrame frame = new JFrame("Cancel Reservation");
+       
        JLabel label = new JLabel();
        JLabel address = new JLabel();
        JLabel logo = new JLabel();
@@ -39,13 +57,6 @@ public class CancelReservation extends JFrame {
        JLabel lnameLabel = new JLabel();
        JLabel reservationLabel = new JLabel();
        JLabel reasonLabel = new JLabel();
-       
-       JTextField fnameText = new JTextField();
-       JTextField lnameText = new JTextField();
-       JTextField reservationText = new JTextField();
-       JTextField reasonText = new JTextField();
-       
-       JButton submitButton = new JButton();
        
        ImageIcon hotelLogo = new ImageIcon("C:\\Users\\CASTOR\\Documents\\NetBeansProjects\\HotelReservationSystem\\src\\javaapplication1\\Pictures\\V.png");
        logo.setIcon(hotelLogo);
@@ -88,11 +99,22 @@ public class CancelReservation extends JFrame {
        reasonLabel.setBounds(150, 250, 200, 35);
        reasonText.setBounds(150, 290, 650, 50);
        
+//Button for submitting
+       //JButton submitButton = new JButton();
        submitButton.setBounds(420, 400, 100, 30);
        submitButton.setText("Submit");
        submitButton.setFont(new Font("Tw Cen MT", Font.PLAIN, 15));
        submitButton.setBackground(Color.GREEN);
        
+//Button for returning to the Landing Page
+       //JButton btnReturn = new JButton();
+       btnReturn.setBounds(520, 400, 100, 30);
+       btnReturn.setText("Back");
+       btnReturn.setFont(new Font("Tw Cen MT", Font.PLAIN, 15));
+       btnReturn.setBackground(Color.GREEN);
+        
+
+//The panel body for the header
        pnlHeader.setLayout(null);
        pnlHeader.setBackground(new Color(23, 33, 35));
        pnlHeader.setPreferredSize(new Dimension(100, 120));
@@ -129,6 +151,7 @@ public class CancelReservation extends JFrame {
        pnlBody.add(reasonLabel);
        pnlBody.add(reasonText);
        pnlBody.add(submitButton);
+       pnlBody.add(btnReturn);
        
        frame.setSize(1050, 700);
        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -140,6 +163,36 @@ public class CancelReservation extends JFrame {
        frame.add(pnlLeftBorder, BorderLayout. WEST);
        frame.add(pnlRightBorder, BorderLayout.EAST);
        frame.setVisible(true);
+       
+       submitButton.addActionListener(this);
+       btnReturn.addActionListener(this);
+    }
+
+    @Override
+    public void actionPerformed(ActionEvent e) {
+        if (e.getSource() == submitButton) {
+            try {
+            Connection connect = DriverManager.getConnection("jdbc:mysql://localhost:3306/db_cancelform", "root", "adminsql");
+            System.out.println("Connected to the database");
+            
+            PreparedStatement preparedStatement = connect.prepareStatement("insert into tbl_cancellation values(?, ?, ?, ?)");
+                    
+                    preparedStatement.setString(1, fnameText.getText());
+                    preparedStatement.setString(2, lnameText.getText());
+                    preparedStatement.setString(3, reservationText.getText());
+                    preparedStatement.setString(4, reasonText.getText());
+                    preparedStatement.executeUpdate();
+                    
+           System.out.println("Data inserted successfully");
+           JOptionPane.showMessageDialog(null, "Cancel Form Successfully Submitted");
+            
+        }catch(Exception ex) {
+            JOptionPane.showMessageDialog(null, ex);
+        }
+    } else if (e.getSource() == btnReturn) {
+            frame.dispose();
+            LandingPage lp = new LandingPage();
+        }             
+        }
     }
     
-}

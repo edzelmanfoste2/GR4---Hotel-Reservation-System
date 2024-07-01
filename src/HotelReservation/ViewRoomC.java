@@ -3,23 +3,23 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
 package HotelReservation;
+
 import java.awt.BorderLayout;
 import java.awt.Color;
 import java.awt.Dimension;
 import java.awt.Font;
-import java.awt.Frame;
 import javax.swing.ImageIcon;
-import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
-import javax.swing.JTextField;
+
 /**
  *
- * @author Administrator
+ * @author CASTOR
  */
-public class ViewRoom extends JFrame {
-   public static void main(String[] args) {
+public class ViewRoomC {
+    
+    ViewRoomC() {
         JFrame frame = new JFrame("ViewRoom");
        JLabel label = new JLabel();
        JLabel label2 = new JLabel();
@@ -113,6 +113,4 @@ public class ViewRoom extends JFrame {
        frame.add(pnlRightBorder, BorderLayout.EAST);
        frame.setVisible(true);
     }
-    
-        
 }
