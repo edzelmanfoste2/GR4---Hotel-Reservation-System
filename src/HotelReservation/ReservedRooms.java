@@ -9,6 +9,7 @@ import javax.swing.JTextField;
 import javax.swing.JComboBox;
 import java.awt.*;
 import javax.swing.ImageIcon;
+import javax.swing.JButton;
 
 public class ReservedRooms extends JFrame {
 
@@ -18,7 +19,7 @@ public class ReservedRooms extends JFrame {
     ReservedRooms() {
         JPanel layout = new JPanel();
         layout.setBounds(0, 0, 900, 600);
-        layout.setBackground(Color.WHITE);
+        layout.setBackground(new Color(242,242,242));
         layout.setLayout(null);
         add(layout);
 
@@ -27,9 +28,9 @@ public class ReservedRooms extends JFrame {
         headerLine.setBackground(new Color(23, 33, 35));
         layout.add(headerLine);
 
-        JLabel reservedRoomsLabel = new JLabel("Reserved Rooms");
+        JLabel reservedRoomsLabel = new JLabel("RESERVE ROOMS");
         reservedRoomsLabel.setBounds(350, 20, 200, 32);
-        reservedRoomsLabel.setFont(new Font("Pristina", Font.BOLD, 32));
+        reservedRoomsLabel.setFont(new Font("Segoe UI Black", Font.BOLD, 20));
         reservedRoomsLabel.setForeground(Color.BLACK);
         layout.add(reservedRoomsLabel);
 
@@ -59,7 +60,7 @@ public class ReservedRooms extends JFrame {
         T2.setBackground(new Color(255, 255, 255));
         layout.add(T2);
 
-        JLabel checkInLabel = new JLabel("Re-enter email: ");
+        JLabel checkInLabel = new JLabel("Phone Number: ");
         checkInLabel.setBounds(64, 140, 160, 22);
         checkInLabel.setFont(new Font("Serif", Font.BOLD, 16));
         checkInLabel.setForeground(Color.BLACK);
@@ -72,32 +73,19 @@ public class ReservedRooms extends JFrame {
         T3.setBackground(new Color(255, 255, 255));
         layout.add(T3);
 
-        JLabel checkOutLabel = new JLabel("Phone number:");
-        checkOutLabel.setBounds(64, 180, 160, 22);
+        JLabel checkOutLabel = new JLabel("Address:");
+        checkOutLabel.setBounds(64, 180, 190, 22);
         checkOutLabel.setFont(new Font("Serif", Font.BOLD, 16));
         checkOutLabel.setForeground(Color.BLACK);
         layout.add(checkOutLabel);
 
         T4 = new JTextField();
-        T4.setBounds(200, 180, 156, 20);
-        T4.setFont(new Font("Calibri", Font.PLAIN, 14));
+        T4.setBounds(200, 180, 400, 20);
+        T4.setFont(new Font("Arial", Font.PLAIN, 14));
         T4.setForeground(Color.BLACK);
         T4.setBackground(new Color(255, 255, 255));
         layout.add(T4);
-
-        JLabel confirmLabel = new JLabel("Region:");
-        confirmLabel.setBounds(400, 180, 160, 22);
-        confirmLabel.setFont(new Font("Serif", Font.BOLD, 16));
-        confirmLabel.setForeground(Color.BLACK);
-        layout.add(confirmLabel);
-
-        T5 = new JComboBox(new String[]{"REGION 1 - ILOCOS", "REGION 2 - CAR", "REGION 3 - CENTRAL LUZON", "REGION 4-A /CALABARZON", "REGION 4-B / MIMIROPA", "REGION 5 - BICOL", "REGION 6 - WESTERN VISAYAS ", "REGION 7 - CENTRAL VISAYAS", "REGION 8 - EASTERN VISAYAS", "REGION 9 - ZAMBOANGA PENINSULA", "REGION 10 - NORTHERN MINDANAO", "REGION 11 - DAVAO REGION", "REGION 12 - SOCCSKSARGEN", "REGION 13 - CARAGA", "REGION 14 - BARMM"});
-        T5.setBounds(460, 180, 200, 20);
-        T5.setFont(new Font("Arial", Font.PLAIN, 12));
-        T5.setForeground(Color.BLACK);
-        T5.setBackground(new Color(255, 255, 255));
-        layout.add(T5);
-///Maria
+        
         JLabel welcomeLabel = new JLabel("Let us know what you need!");
         welcomeLabel.setBounds(64, 220, 250, 22);
         welcomeLabel.setFont(new Font("Serif", Font.BOLD, 20));
@@ -148,21 +136,25 @@ public class ReservedRooms extends JFrame {
         T6.setForeground(Color.BLACK);
         T6.setBackground(new Color(255, 255, 255));
         layout.add(T6);
-        
+
+        JButton LoginButton = new JButton("View Room");
+        LoginButton.setBounds(375, 560, 150, 30);
+        LoginButton.setForeground(Color.WHITE);
+        LoginButton.setBackground(Color.BLACK);
+        layout.add(LoginButton);
+
         ImageIcon imageIcon = new ImageIcon("V.png");
         Image image = imageIcon.getImage().getScaledInstance(300, 300, Image.SCALE_DEFAULT);
         ImageIcon imageIcon1 = new ImageIcon(image);
         JLabel label = new JLabel(imageIcon1);
-        label.setBounds(670, 40, 200, 200);
+        label.setBounds(670, 10, 200, 200);
         layout.add(label);
-     
-        setSize(900, 600);
+               
+        setSize(900, 700);
+        setTitle("Reserved Room");
         setLayout(null);
         setVisible(true);
         setResizable(false);
         setLocation(20, 200);
     }
-
-     
     }
-
