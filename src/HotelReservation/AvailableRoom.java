@@ -130,23 +130,23 @@ public class AvailableRoom extends JFrame{
       add(roomsize);
       roomsize.setBounds(30, 90, 500, 90);
       
-      JLabel info = new JLabel();
-      info.setText("City view");
-      info.setFont(new Font("Waverly", Font.PLAIN, 15));
-      add(info);
-      info.setBounds(30,120, 500, 90);
+      JLabel cv = new JLabel();
+      cv.setText("City view");
+      cv.setFont(new Font("Waverly", Font.PLAIN, 15));
+      add(cv);
+      cv.setBounds(30,120, 500, 90);
       
-      JLabel view = new JLabel();
-      view.setText("Shower");
-      view.setFont(new Font("Waverly", Font.PLAIN, 15));
-      add(view);
-      view.setBounds(30,180, 500, 90);
+      JLabel sh = new JLabel();
+      sh.setText("Shower");
+      sh.setFont(new Font("Waverly", Font.PLAIN, 15));
+      add(sh);
+      sh.setBounds(30,180, 500, 90);
       
-       JLabel bth = new JLabel();
-      bth.setText("Kitchenette ");
-      bth.setFont(new Font("Waverly", Font.PLAIN, 15));
-      add(bth);
-      bth.setBounds(30,150, 500, 90);
+       JLabel kc = new JLabel();
+      kc.setText("Kitchenette ");
+      kc.setFont(new Font("Waverly", Font.PLAIN, 15));
+      add(kc);
+      kc.setBounds(30,150, 500, 90);
       
       //BENEFITS PANEL
        JLabel price = new JLabel();
@@ -194,11 +194,11 @@ public class AvailableRoom extends JFrame{
       
       //FOR ROOM 104(FOR 1-2 PAX ONLY)
       
-       JLabel roomtype = new JLabel();
-      roomtype.setText("ROOM 104- STANDARD TRIPLE ROOM");
-      roomtype.setFont(new Font("Serif", Font.PLAIN, 30));
-      add(roomtype);
-      roomtype.setBounds(10, 320, 600, 50);
+       JLabel header2 = new JLabel();
+      header2.setText("ROOM 104- STANDARD TRIPLE ROOM");
+      header2.setFont(new Font("Serif", Font.PLAIN, 30));
+      add(header2);
+      header2.setBounds(10, 320, 600, 50);
       
         //FOR ROOM 104(FOR 1-2 PAX ONLY) INFO
         
@@ -220,11 +220,11 @@ public class AvailableRoom extends JFrame{
       add(city);
       city.setBounds(30,438, 500, 90);
       
-       JLabel smoke = new JLabel();
-      smoke.setText("Shower");
-      smoke.setFont(new Font("Waverly", Font.PLAIN, 15));
-      add(smoke);
-      smoke.setBounds(30,468, 500, 90);
+       JLabel s = new JLabel();
+      s.setText("Shower");
+      s.setFont(new Font("Waverly", Font.PLAIN, 15));
+      add(s);
+      s.setBounds(30,468, 500, 90);
       
        JLabel kitchen = new JLabel();
       kitchen.setText("Kitchenette");
@@ -264,11 +264,11 @@ public class AvailableRoom extends JFrame{
       add(options2);
       options2.setBounds(370,468, 500, 90);
       
-        JLabel bf2 = new JLabel();
-      bf2.setText(" ✔ Breakfast at ₱1,200");
-      bf2.setFont(new Font("Waverly", Font.PLAIN, 15));
-      add(bf2);
-      bf2.setBounds(370,498, 500, 90);
+        JLabel b2 = new JLabel();
+      b2.setText(" ✔ Breakfast at ₱1,200");
+      b2.setFont(new Font("Waverly", Font.PLAIN, 15));
+      add(b2);
+      b2.setBounds(370,498, 500, 90);
       
       //PRICE PER NIGHT
         JLabel prc4 = new JLabel();
@@ -277,12 +277,12 @@ public class AvailableRoom extends JFrame{
       add(prc4);
       prc4.setBounds(900,400, 400, 90);
       
-      JButton checkin = new JButton("Book Now!");
-      checkin.setFont(new Font("Serif", Font.PLAIN, 20));
-              add(checkin);
-              checkin.setBounds(1090, 120, 150, 50);     
-                checkin.setBackground(new Color(23, 33, 35));
-                checkin.setForeground(Color.WHITE);
+      JButton booknow = new JButton("Book Now!");
+      booknow.setFont(new Font("Serif", Font.PLAIN, 20));
+              add(booknow);
+              booknow.setBounds(1090, 120, 150, 50);     
+                booknow.setBackground(new Color(23, 33, 35));
+                booknow.setForeground(Color.WHITE);
               
               JButton viewroom = new JButton("View Room");
                   viewroom.setFont(new Font("Serif", Font.PLAIN, 20));
@@ -291,12 +291,12 @@ public class AvailableRoom extends JFrame{
               viewroom.setBackground(new Color(23, 33, 35));
               viewroom.setForeground(Color.WHITE);
               
-              JButton checkin2 = new JButton("Book Now!");
-      checkin2.setFont(new Font("Serif", Font.PLAIN, 20));
-              add(checkin2);
-              checkin2.setBounds(1090, 438, 150, 50);     
-                checkin2.setBackground(new Color(23, 33, 35));
-                checkin2.setForeground(Color.WHITE);
+              JButton booknow2 = new JButton("Book Now!");
+      booknow2.setFont(new Font("Serif", Font.PLAIN, 20));
+              add(booknow2);
+              booknow2.setBounds(1090, 438, 150, 50);     
+                booknow2.setBackground(new Color(23, 33, 35));
+                booknow2.setForeground(Color.WHITE);
               
                  JButton viewroom2 = new JButton("View Room");
                   viewroom2.setFont(new Font("Serif", Font.PLAIN, 20));
@@ -329,3 +329,4 @@ public class AvailableRoom extends JFrame{
       color04.add(booked2);
     }   
 }
+
