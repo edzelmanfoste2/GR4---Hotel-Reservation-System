@@ -6,9 +6,14 @@ import java.awt.Color;
 import java.awt.Dimension;
 import java.awt.Font;
 import java.awt.Image;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
-public class LandingPage{
+public class LandingPage implements ActionListener{
     
+    private JFrame frame = new JFrame("Landing Page");
+    private JButton viewButton= new JButton();
+    private JButton cancelButton = new JButton();
     
     LandingPage() {
 //Information for the Combobox
@@ -17,7 +22,7 @@ public class LandingPage{
         String[] occupants = {"1 Adult", "2 Adults", "3 Adults", "4+ Adults"};
         String[] occupantsChild = {"1 Child", "2 Children", "3 Children", "4+ Children"};
         
-        JFrame frame = new JFrame("Landing Page");
+        
         JLabel label = new JLabel();
         JLabel introduce = new JLabel();
         JLabel description = new JLabel();
@@ -25,8 +30,8 @@ public class LandingPage{
         
         JLabel logo = new JLabel();
         
-        JButton viewButton= new JButton();
-        JButton cancelButton = new JButton();
+        //JButton viewButton= new JButton();
+        //JButton cancelButton = new JButton();
         JButton searchButton = new JButton();
         
         JPanel pnlHeader = new JPanel();
@@ -158,5 +163,23 @@ public class LandingPage{
         frame.add(pnlLeftBorder, BorderLayout. WEST);
         frame.add(pnlRightBorder, BorderLayout.EAST);
         frame.setVisible(true);
+        
+        cancelButton.addActionListener(this);
+        viewButton.addActionListener(this);
+    }
+
+    @Override
+    public void actionPerformed(ActionEvent e) {
+        
+        if(e.getSource() == viewButton) {
+            
+            AvailableRooms AV1 = new AvailableRooms();
+            frame.dispose();
+            
+        } else if (e.getSource() == cancelButton) {
+            
+            CancelReservation reserveCancel = new CancelReservation();
+            frame.dispose();
+        }
     }
 }

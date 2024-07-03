@@ -7,8 +7,6 @@ import static javax.swing.WindowConstants.EXIT_ON_CLOSE;
 public class AvailableRoom extends JFrame{
 
     public AvailableRoom() {
-   
-        
       JLabel header = new JLabel("ROOM 103 - STANDARD SINGLE");
       add(header);
       header.setFont(new Font("Serif", Font.PLAIN, 30));
@@ -329,16 +327,6 @@ public class AvailableRoom extends JFrame{
       color02.add(benefits02);
       color03.add(prices01);
       color04.add(booked2);
-   
-     
-    }
-
-public static void main(String[] args) {
-      
-               new AvailableRoom();
-    
-     }
-     
-    
+    }   
 }
-   
+
