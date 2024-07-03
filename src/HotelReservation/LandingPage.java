@@ -17,10 +17,10 @@ public class LandingPage implements ActionListener{
     
     LandingPage() {
 //Information for the Combobox
-        String[] checkIn = {"Check-In Date", "Date", "Date"};
-        String[] checkOut = {"Check-out Date", "Date", "Date"};
-        String[] occupants = {"1 Adult", "2 Adults", "3 Adults", "4+ Adults"};
-        String[] occupantsChild = {"1 Child", "2 Children", "3 Children", "4+ Children"};
+        //String[] checkIn = {"Check-In Date", "Date", "Date"};
+        //String[] checkOut = {"Check-out Date", "Date", "Date"};
+        //String[] occupants = {"1 Adult", "2 Adults", "3 Adults", "4+ Adults"};
+        //String[] occupantsChild = {"1 Child", "2 Children", "3 Children", "4+ Children"};
         
         
         JLabel label = new JLabel();
@@ -41,15 +41,15 @@ public class LandingPage implements ActionListener{
         JPanel pnlRightBorder = new JPanel();
         
 //Comboboxes preference of users
-        JComboBox occupancyChild =  new JComboBox(occupantsChild); //Combobox for the number of children
-        JComboBox occupancy = new JComboBox(occupants);// Combobox for the number of adult occupants
-        JComboBox checkIN = new JComboBox(checkIn);//The check-in date
-        JComboBox checkOUT = new JComboBox(checkOut);//The check-out date
+        //JComboBox occupancyChild =  new JComboBox(occupantsChild); //Combobox for the number of children
+        //JComboBox occupancy = new JComboBox(occupants);// Combobox for the number of adult occupants
+        //JComboBox checkIN = new JComboBox(checkIn);//The check-in date
+        //JComboBox checkOUT = new JComboBox(checkOut);//The check-out date
        
-        checkIN.setBounds(90, 325, 150, 35);
-        checkOUT.setBounds(250, 325, 150, 35);
-        occupancyChild.setBounds(500, 325, 100, 35);
-        occupancy.setBounds(625, 325, 100, 35);
+        //checkIN.setBounds(90, 325, 150, 35);
+        //checkOUT.setBounds(250, 325, 150, 35);
+        //occupancyChild.setBounds(500, 325, 100, 35);
+        //occupancy.setBounds(625, 325, 100, 35);
         
         //Button for searching the preferrence of users 
         searchButton.setText("Search");
@@ -150,12 +150,12 @@ public class LandingPage implements ActionListener{
         pnlBody.add(viewButton);
         pnlBody.add(cancelButton);
         
-        pnlBody.add(occupancyChild);
-        pnlBody.add(occupancy);
-        pnlBody.add(checkIN);
-        pnlBody.add(checkOUT);
+        //pnlBody.add(occupancyChild);
+        //pnlBody.add(occupancy);
+        //pnlBody.add(checkIN);
+        //pnlBody.add(checkOUT);
         
-        pnlBody.add(searchButton);
+        //pnlBody.add(searchButton);
    
         frame.add(pnlHeader, BorderLayout.NORTH);
         frame.add(pnlBody, BorderLayout.CENTER);
