@@ -116,34 +116,6 @@ public class ReservedRooms extends JFrame implements ActionListener {
         welcomeLabel.setForeground(Color.BLACK);
         layout.add(welcomeLabel);
 
-//        JLabel preferenceLabel = new JLabel("Do you have a smoking preference? ");
-//        preferenceLabel.setBounds(64, 270, 300, 22);
-//        preferenceLabel.setFont(new Font("Serif", Font.BOLD, 16));
-//        preferenceLabel.setForeground(Color.BLACK);
-//        layout.add(preferenceLabel);
-//        Checkbox ckbNonSmokin = new Checkbox("Non-smoking");
-//        ckbNonSmokin.setBounds(64, 280, 100, 60);
-//        ckbNonSmokin.setFont(new Font("Arial", Font.PLAIN, 12));
-//        layout.add(ckbNonSmokin);
-//
-//        Checkbox cbkSmoking = new Checkbox("Smoking");
-//        cbkSmoking.setBounds(64, 330, 100, 30);
-//        cbkSmoking.setFont(new Font("Arial", Font.PLAIN, 12));
-//        layout.add(cbkSmoking);
-//        JLabel bedprefLabel = new JLabel("What bed configuration do you prefer? ");
-//        bedprefLabel.setBounds(64, 360, 300, 22);
-//        bedprefLabel.setFont(new Font("Serif", Font.BOLD, 16));
-//        bedprefLabel.setForeground(Color.BLACK);
-//        layout.add(bedprefLabel);
-//        Checkbox cbkLargeBed = new Checkbox("I'd like a large bed");
-//        cbkLargeBed.setBounds(64, 380, 100, 60);
-//        cbkLargeBed.setFont(new Font("Arial", Font.PLAIN, 12));
-//        layout.add(cbkLargeBed);
-//
-//        Checkbox cbkTwinBed = new Checkbox("I'd like a twin beds");
-//        cbkTwinBed.setBounds(64, 430, 100, 30);
-//        cbkTwinBed.setFont(new Font("Arial", Font.PLAIN, 12));
-//        layout.add(cbkTwinBed);
         JLabel AddReqLabel = new JLabel("Additional Request:");
         AddReqLabel.setBounds(64, 470, 300, 22);
         AddReqLabel.setFont(new Font("Serif", Font.BOLD, 16));
@@ -181,12 +153,13 @@ public class ReservedRooms extends JFrame implements ActionListener {
         setLayout(null);
         setVisible(true);
         setResizable(false);
+           setLocationRelativeTo(null); 
         setLocation(20, 200);
 
         btnViewRoom.addActionListener(this);
         btnSubmit.addActionListener(this);
     }
-
+  
     @Override
     public void actionPerformed(ActionEvent e) {
         String roomAvailability = null;
