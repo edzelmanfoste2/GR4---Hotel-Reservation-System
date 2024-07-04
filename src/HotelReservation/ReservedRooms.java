@@ -155,9 +155,20 @@ public class ReservedRooms extends JFrame {
         setLayout(null);
         setVisible(true);
         setResizable(false);
+           setLocationRelativeTo(null); 
         setLocation(20, 200);
     }
-
+  public static void main(String[] args) {
+      
+               EventQueue.invokeLater(new Runnable(){
+            @Override
+            public void run(){
+                ReservedRooms roomwan = new ReservedRooms();
+                
+            }
+    
+               });
+                       }
      
     }
 

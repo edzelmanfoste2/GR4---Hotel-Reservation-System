@@ -173,7 +173,7 @@ public class LandingPage implements ActionListener{
         
         if(e.getSource() == viewButton) {
             
-            AvailableRooms AV1 = new AvailableRooms();
+            avail101 AV1 = new avail101();
             frame.dispose();
             
         } else if (e.getSource() == cancelButton) {
