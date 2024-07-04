@@ -177,7 +177,6 @@ public class LandingPage implements ActionListener{
             frame.dispose();
             
         } else if (e.getSource() == cancelButton) {
-            
             CancelReservation reserveCancel = new CancelReservation();
             frame.dispose();
         }

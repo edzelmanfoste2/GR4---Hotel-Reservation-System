@@ -165,7 +165,7 @@ public class ReservedRooms extends JFrame implements ActionListener {
         String roomAvailability = null;
         if (e.getSource() == btnViewRoom) {
             dispose();
-            ViewRoomC vr = new ViewRoomC();
+            //ViewRoomC vr = new ViewRoomC();
 
         } else if (e.getSource() == btnSubmit) {
             dispose();
@@ -183,7 +183,10 @@ public class ReservedRooms extends JFrame implements ActionListener {
                     if (resultSet.next()) {
                         roomAvailability = resultSet.getString("Availability");
                         System.out.println("Room found, availability: " + roomAvailability);
-                    } 
+                    } else {
+                        System.out.println("Room not found");
+                    }
+                    
                     if ("0".equals(roomAvailability)) {
                         //Statement or insertion of data in the check-in form table
                         PreparedStatement preparedStatement = connect.prepareStatement("insert into tbl_checkinform (FName, RoomNumber, Email, PhoneNumber, Address) values(?, ?, ?, ?, ?)");

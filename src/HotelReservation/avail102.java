@@ -240,12 +240,6 @@ public class avail102 extends JFrame implements ActionListener {
      
     }
 
-public static void main(String[] args) {
-      
-               new avail102();
-    
-     }
-
     @Override
     public void actionPerformed(ActionEvent e) {
         
