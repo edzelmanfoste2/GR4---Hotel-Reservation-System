@@ -153,19 +153,19 @@ public class ReservedRooms extends JFrame implements ActionListener {
         setLayout(null);
         setVisible(true);
         setResizable(false);
-           setLocationRelativeTo(null); 
+        setLocationRelativeTo(null);
         setLocation(20, 200);
 
         btnViewRoom.addActionListener(this);
         btnSubmit.addActionListener(this);
     }
-  
+
     @Override
     public void actionPerformed(ActionEvent e) {
         String roomAvailability = null;
         if (e.getSource() == btnViewRoom) {
             dispose();
-            //ViewRoomC vr = new ViewRoomC();
+            avail101 roomView1 = new avail101();
 
         } else if (e.getSource() == btnSubmit) {
             dispose();
@@ -175,6 +175,7 @@ public class ReservedRooms extends JFrame implements ActionListener {
                 System.out.println("Connected to the database");
 
                 //Checking of the status of the room availability
+                //Change the location of the table name included 
                 PreparedStatement checking = connect.prepareStatement("SELECT Availability from tbl_checkinform where RoomNumber = ?");
                 checking.setString(1, txtRoom.getText());
                 ResultSet resultSet = checking.executeQuery();
@@ -186,15 +187,19 @@ public class ReservedRooms extends JFrame implements ActionListener {
                     } else {
                         System.out.println("Room not found");
                     }
-                    
+
+                    System.out.println(resultSet.next());
+
                     if ("0".equals(roomAvailability)) {
                         //Statement or insertion of data in the check-in form table
-                        PreparedStatement preparedStatement = connect.prepareStatement("insert into tbl_checkinform (FName, RoomNumber, Email, PhoneNumber, Address) values(?, ?, ?, ?, ?)");
+                        PreparedStatement preparedStatement = connect.prepareStatement("insert into tbl_checkinform (FName, RoomNumber, Email, PhoneNumber, Address, Additional) values(?, ?, ?, ?, ?, ?)");
+
                         preparedStatement.setString(1, txtFullName.getText());
                         preparedStatement.setString(2, txtRoom.getText());
                         preparedStatement.setString(3, txtEmail.getText());
                         preparedStatement.setString(4, txtPnumber.getText());
                         preparedStatement.setString(5, txtAddress.getText());
+                        preparedStatement.setString(6, txtAdditional.getText());
                         preparedStatement.executeUpdate();
 
                         System.out.println("Data inserted successfully");
@@ -204,10 +209,15 @@ public class ReservedRooms extends JFrame implements ActionListener {
                         PreparedStatement updateAvailability = connect.prepareStatement("update tbl_checkinform set Availability = 1 where RoomNumber = ?");
                         updateAvailability.setString(1, txtRoom.getText());
                         updateAvailability.executeUpdate();
+                        ReservedRooms reservedRooms = new ReservedRooms();
+                        
                     } else if ("1".equals(roomAvailability)) {
                         JOptionPane.showMessageDialog(null, "Room: " + txtRoom.getText() + " is already booked. Check through other of our rooms!");
-                   } else {
-                        JOptionPane.showMessageDialog(null, "Room: " + txtRoom.getText() + " cannot be found.");                    }
+                        avail101 roomView1 = new avail101();
+                    } else {
+                        JOptionPane.showMessageDialog(null, "Room: " + txtRoom.getText() + " cannot be found.");
+                        ReservedRooms reservedRooms = new ReservedRooms();
+                    }
                 } catch (Exception ex) {
                     JOptionPane.showMessageDialog(null, ex.getMessage());
                 }

@@ -40,18 +40,6 @@ public class LandingPage implements ActionListener{
         JPanel pnlLeftBorder = new JPanel();
         JPanel pnlRightBorder = new JPanel();
         
-//Comboboxes preference of users
-        //JComboBox occupancyChild =  new JComboBox(occupantsChild); //Combobox for the number of children
-        //JComboBox occupancy = new JComboBox(occupants);// Combobox for the number of adult occupants
-        //JComboBox checkIN = new JComboBox(checkIn);//The check-in date
-        //JComboBox checkOUT = new JComboBox(checkOut);//The check-out date
-       
-        //checkIN.setBounds(90, 325, 150, 35);
-        //checkOUT.setBounds(250, 325, 150, 35);
-        //occupancyChild.setBounds(500, 325, 100, 35);
-        //occupancy.setBounds(625, 325, 100, 35);
-        
-        //Button for searching the preferrence of users 
         searchButton.setText("Search");
         searchButton.setBounds(750, 325, 150, 35);
         searchButton.setFocusable(false);

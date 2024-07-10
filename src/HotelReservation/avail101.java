@@ -241,9 +241,10 @@ public class avail101 extends JFrame implements ActionListener {
     public void actionPerformed(ActionEvent e) {
 
         if (e.getSource() == booknow) {
-
+            dispose();
             ReservedRooms reserve = new ReservedRooms();
-            reserve.dispose();
+            
+            //Add functionality to connecting to the DB or for checking the availability
 
         } else if (e.getSource() == viewroom) {
 
